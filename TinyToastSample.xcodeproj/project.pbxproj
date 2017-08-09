@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36C6D6291F39932500B7142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D6281F39932500B7142B /* AppDelegate.swift */; };
+		36C6D62B1F39932500B7142B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D62A1F39932500B7142B /* ViewController.swift */; };
+		36C6D62E1F39932500B7142B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C6D62C1F39932500B7142B /* Main.storyboard */; };
+		36C6D6301F39932500B7142B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C6D62F1F39932500B7142B /* Assets.xcassets */; };
+		36C6D6331F39932500B7142B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C6D6311F39932500B7142B /* LaunchScreen.storyboard */; };
+		36C6D6431F39933700B7142B /* TinyToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 36C6D6411F39933700B7142B /* TinyToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36C6D6461F39933700B7142B /* TinyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C6D63F1F39933700B7142B /* TinyToast.framework */; };
+		36C6D6471F39933700B7142B /* TinyToast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36C6D63F1F39933700B7142B /* TinyToast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36C6D64D1F39939B00B7142B /* TinyToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64C1F39939B00B7142B /* TinyToast.swift */; };
+		36C6D64F1F39941B00B7142B /* BaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64E1F39941B00B7142B /* BaseWindow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36C6D6441F39933700B7142B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36C6D61D1F39932500B7142B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36C6D63E1F39933700B7142B;
+			remoteInfo = TinyToast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		36C6D64B1F39933700B7142B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				36C6D6471F39933700B7142B /* TinyToast.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		36C6D6251F39932500B7142B /* TinyToastSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyToastSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36C6D6281F39932500B7142B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		36C6D62A1F39932500B7142B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36C6D62D1F39932500B7142B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		36C6D62F1F39932500B7142B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36C6D6321F39932500B7142B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		36C6D6341F39932500B7142B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36C6D63F1F39933700B7142B /* TinyToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36C6D6411F39933700B7142B /* TinyToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinyToast.h; sourceTree = "<group>"; };
+		36C6D6421F39933700B7142B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36C6D64C1F39939B00B7142B /* TinyToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToast.swift; sourceTree = "<group>"; };
+		36C6D64E1F39941B00B7142B /* BaseWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWindow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36C6D6221F39932500B7142B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C6D6461F39933700B7142B /* TinyToast.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36C6D63B1F39933700B7142B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36C6D61C1F39932500B7142B = {
+			isa = PBXGroup;
+			children = (
+				36C6D6271F39932500B7142B /* TinyToastSample */,
+				36C6D6401F39933700B7142B /* TinyToast */,
+				36C6D6261F39932500B7142B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		36C6D6261F39932500B7142B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36C6D6251F39932500B7142B /* TinyToastSample.app */,
+				36C6D63F1F39933700B7142B /* TinyToast.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36C6D6271F39932500B7142B /* TinyToastSample */ = {
+			isa = PBXGroup;
+			children = (
+				36C6D6281F39932500B7142B /* AppDelegate.swift */,
+				36C6D62A1F39932500B7142B /* ViewController.swift */,
+				36C6D62C1F39932500B7142B /* Main.storyboard */,
+				36C6D62F1F39932500B7142B /* Assets.xcassets */,
+				36C6D6311F39932500B7142B /* LaunchScreen.storyboard */,
+				36C6D6341F39932500B7142B /* Info.plist */,
+			);
+			path = TinyToastSample;
+			sourceTree = "<group>";
+		};
+		36C6D6401F39933700B7142B /* TinyToast */ = {
+			isa = PBXGroup;
+			children = (
+				36C6D64C1F39939B00B7142B /* TinyToast.swift */,
+				36C6D64E1F39941B00B7142B /* BaseWindow.swift */,
+				36C6D6411F39933700B7142B /* TinyToast.h */,
+				36C6D6421F39933700B7142B /* Info.plist */,
+			);
+			path = TinyToast;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		36C6D63C1F39933700B7142B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C6D6431F39933700B7142B /* TinyToast.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		36C6D6241F39932500B7142B /* TinyToastSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36C6D6371F39932500B7142B /* Build configuration list for PBXNativeTarget "TinyToastSample" */;
+			buildPhases = (
+				36C6D6211F39932500B7142B /* Sources */,
+				36C6D6221F39932500B7142B /* Frameworks */,
+				36C6D6231F39932500B7142B /* Resources */,
+				36C6D64B1F39933700B7142B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36C6D6451F39933700B7142B /* PBXTargetDependency */,
+			);
+			name = TinyToastSample;
+			productName = TinyToastSample;
+			productReference = 36C6D6251F39932500B7142B /* TinyToastSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36C6D63E1F39933700B7142B /* TinyToast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36C6D6481F39933700B7142B /* Build configuration list for PBXNativeTarget "TinyToast" */;
+			buildPhases = (
+				36C6D63A1F39933700B7142B /* Sources */,
+				36C6D63B1F39933700B7142B /* Frameworks */,
+				36C6D63C1F39933700B7142B /* Headers */,
+				36C6D63D1F39933700B7142B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyToast;
+			productName = TinyToast;
+			productReference = 36C6D63F1F39933700B7142B /* TinyToast.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36C6D61D1F39932500B7142B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = keygx;
+				TargetAttributes = {
+					36C6D6241F39932500B7142B = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					36C6D63E1F39933700B7142B = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+					};
+				};
+			};
+			buildConfigurationList = 36C6D6201F39932500B7142B /* Build configuration list for PBXProject "TinyToastSample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36C6D61C1F39932500B7142B;
+			productRefGroup = 36C6D6261F39932500B7142B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36C6D6241F39932500B7142B /* TinyToastSample */,
+				36C6D63E1F39933700B7142B /* TinyToast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36C6D6231F39932500B7142B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C6D6331F39932500B7142B /* LaunchScreen.storyboard in Resources */,
+				36C6D6301F39932500B7142B /* Assets.xcassets in Resources */,
+				36C6D62E1F39932500B7142B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36C6D63D1F39933700B7142B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36C6D6211F39932500B7142B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C6D62B1F39932500B7142B /* ViewController.swift in Sources */,
+				36C6D6291F39932500B7142B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36C6D63A1F39933700B7142B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C6D64F1F39941B00B7142B /* BaseWindow.swift in Sources */,
+				36C6D64D1F39939B00B7142B /* TinyToast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36C6D6451F39933700B7142B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36C6D63E1F39933700B7142B /* TinyToast */;
+			targetProxy = 36C6D6441F39933700B7142B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36C6D62C1F39932500B7142B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36C6D62D1F39932500B7142B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		36C6D6311F39932500B7142B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36C6D6321F39932500B7142B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36C6D6351F39932500B7142B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		36C6D6361F39932500B7142B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36C6D6381F39932500B7142B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CCNMX7TC9;
+				INFOPLIST_FILE = TinyToastSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.TinyToastSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36C6D6391F39932500B7142B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CCNMX7TC9;
+				INFOPLIST_FILE = TinyToastSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.TinyToastSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		36C6D6491F39933700B7142B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3CCNMX7TC9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TinyToast/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.TinyToast;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		36C6D64A1F39933700B7142B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3CCNMX7TC9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TinyToast/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.TinyToast;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36C6D6201F39932500B7142B /* Build configuration list for PBXProject "TinyToastSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36C6D6351F39932500B7142B /* Debug */,
+				36C6D6361F39932500B7142B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36C6D6371F39932500B7142B /* Build configuration list for PBXNativeTarget "TinyToastSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36C6D6381F39932500B7142B /* Debug */,
+				36C6D6391F39932500B7142B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36C6D6481F39933700B7142B /* Build configuration list for PBXNativeTarget "TinyToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36C6D6491F39933700B7142B /* Debug */,
+				36C6D64A1F39933700B7142B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36C6D61D1F39932500B7142B /* Project object */;
+}
