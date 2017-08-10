@@ -194,11 +194,9 @@ extension TTView {
             completion:nil)
         
         // Toast display duration
-        let delay = duration * Double(NSEC_PER_SEC)
-        let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: time, execute: {
+        AsyncUtil.onMainThread({
             self.dismiss()
-        })
+        }, delay: duration)
     }
     
     func dismiss() -> Void {

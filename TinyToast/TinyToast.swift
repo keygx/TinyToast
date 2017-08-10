@@ -37,7 +37,9 @@ public class TinyToast: TinyToastDelegate {
 
 extension TinyToast {
     public func show(message: String, valign: TinyToastDisplayVAlign = .center, duration: TinyToastDisplayDuration) {
-        queue.append(TTModel(message: message, valign: valign, duration: duration))
+        AsyncUtil.sync {
+            queue.append(TTModel(message: message, valign: valign, duration: duration))
+        }
     }
     
     public func dismiss() {
@@ -52,7 +54,9 @@ extension TinyToast {
             return
         }
         toast.dismiss()
-        queue.removeAll()
+        AsyncUtil.sync {
+            queue.removeAll()
+        }
     }
 }
 
@@ -66,8 +70,10 @@ extension TinyToast {
     
     func didCompleted() {
         if isQueued {
-            queue.removeFirst()
-            next()
+            AsyncUtil.sync {
+                queue.removeFirst()
+                next()
+            }
         }
     }
 }

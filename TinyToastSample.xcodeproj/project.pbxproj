@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		366BC53D1F3AB1D20017DEA8 /* TinyToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366BC53C1F3AB1D20017DEA8 /* TinyToast.swift */; };
 		366BC53F1F3AC1DA0017DEA8 /* TTEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366BC53E1F3AC1DA0017DEA8 /* TTEnum.swift */; };
+		3679459F1F3C650100E84746 /* AsyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3679459E1F3C650100E84746 /* AsyncUtil.swift */; };
 		36C6D6291F39932500B7142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D6281F39932500B7142B /* AppDelegate.swift */; };
 		36C6D62B1F39932500B7142B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D62A1F39932500B7142B /* ViewController.swift */; };
 		36C6D62E1F39932500B7142B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C6D62C1F39932500B7142B /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		366BC53C1F3AB1D20017DEA8 /* TinyToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToast.swift; sourceTree = "<group>"; };
 		366BC53E1F3AC1DA0017DEA8 /* TTEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTEnum.swift; sourceTree = "<group>"; };
+		3679459E1F3C650100E84746 /* AsyncUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncUtil.swift; sourceTree = "<group>"; };
 		36C6D6251F39932500B7142B /* TinyToastSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyToastSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C6D6281F39932500B7142B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C6D62A1F39932500B7142B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				36F7FBCE1F3C23D700F513E7 /* TTModel.swift */,
 				366BC53E1F3AC1DA0017DEA8 /* TTEnum.swift */,
 				36C6D64E1F39941B00B7142B /* TTWindow.swift */,
+				3679459E1F3C650100E84746 /* AsyncUtil.swift */,
 				36C6D6411F39933700B7142B /* TinyToast.h */,
 				36C6D6421F39933700B7142B /* Info.plist */,
 			);
@@ -267,6 +270,7 @@
 				36C6D64D1F39939B00B7142B /* TTView.swift in Sources */,
 				36F7FBCF1F3C23D700F513E7 /* TTModel.swift in Sources */,
 				366BC53F1F3AC1DA0017DEA8 /* TTEnum.swift in Sources */,
+				3679459F1F3C650100E84746 /* AsyncUtil.swift in Sources */,
 				366BC53D1F3AB1D20017DEA8 /* TinyToast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
