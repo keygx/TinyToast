@@ -19,6 +19,7 @@
 		36C6D6471F39933700B7142B /* TinyToast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36C6D63F1F39933700B7142B /* TinyToast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36C6D64D1F39939B00B7142B /* TTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64C1F39939B00B7142B /* TTView.swift */; };
 		36C6D64F1F39941B00B7142B /* TTWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64E1F39941B00B7142B /* TTWindow.swift */; };
+		36EC3D821F3C4CF9004385A9 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC3D811F3C4CF9004385A9 /* StandardButton.swift */; };
 		36F7FBCF1F3C23D700F513E7 /* TTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7FBCE1F3C23D700F513E7 /* TTModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		36C6D6421F39933700B7142B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36C6D64C1F39939B00B7142B /* TTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTView.swift; sourceTree = "<group>"; };
 		36C6D64E1F39941B00B7142B /* TTWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTWindow.swift; sourceTree = "<group>"; };
+		36EC3D811F3C4CF9004385A9 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		36F7FBCE1F3C23D700F513E7 /* TTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 		36C6D6271F39932500B7142B /* TinyToastSample */ = {
 			isa = PBXGroup;
 			children = (
+				36EC3D801F3C4C8D004385A9 /* Styles */,
 				36C6D6281F39932500B7142B /* AppDelegate.swift */,
 				36C6D62A1F39932500B7142B /* ViewController.swift */,
 				36C6D62C1F39932500B7142B /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				36C6D6421F39933700B7142B /* Info.plist */,
 			);
 			path = TinyToast;
+			sourceTree = "<group>";
+		};
+		36EC3D801F3C4C8D004385A9 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				36EC3D811F3C4CF9004385A9 /* StandardButton.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 			files = (
 				36C6D62B1F39932500B7142B /* ViewController.swift in Sources */,
 				36C6D6291F39932500B7142B /* AppDelegate.swift in Sources */,
+				36EC3D821F3C4CF9004385A9 /* StandardButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

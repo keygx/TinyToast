@@ -28,14 +28,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override var shouldAutorotate: Bool{
-        return true
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if(textView.isFirstResponder){
+            textView.resignFirstResponder()
+        }
     }
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .all
-    }
-    
+}
+
+extension ViewController {
     @IBAction func segVAlign(_ sender: UISegmentedControl) {
         segVAlign.selectedSegmentIndex = sender.selectedSegmentIndex
     }
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         segDuration.selectedSegmentIndex = sender.selectedSegmentIndex
     }
     
-    @IBAction func btnShowAction(_ sender: UIButton) {
+    @IBAction func btnShowAction(_ sender: StandardButton) {
         message = textView.text
         
         var valign: TinyToastDisplayVAlign = .center
@@ -84,14 +84,24 @@ class ViewController: UIViewController {
         TinyToast.shared.show(message: message, valign: valign, duration: duration)
     }
     
-    @IBAction func btnDismissAction(_ sender: UIButton) {
+    @IBAction func btnDismissAction(_ sender: StandardButton) {
         // Dismiss first Toast
         TinyToast.shared.dismiss()
     }
     
-    @IBAction func btnDismissAllAction(_ sender: UIButton) {
+    @IBAction func btnDismissAllAction(_ sender: StandardButton) {
         // Dismiss All
         TinyToast.shared.dismissAll()
+    }
+}
+
+extension ViewController {
+    override var shouldAutorotate: Bool{
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .all
     }
 }
 
