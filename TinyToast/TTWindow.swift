@@ -1,5 +1,5 @@
 //
-//  BaseWindow.swift
+//  TTWindow.swift
 //  TinyToast
 //
 //  Created by keygx on 2017/08/08.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseWindow: UIWindow {
+class TTWindow: UIWindow {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

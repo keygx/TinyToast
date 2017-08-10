@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var segVAlign: UISegmentedControl!
     @IBOutlet weak var segDuration: UISegmentedControl!
     
+    let t2 = TinyToast()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,7 +71,7 @@ class ViewController: UIViewController {
             break
         }
         
-        TinyToast().show(message: textView.text, valign: valign, duration: duration)
+        t2.show(message: textView.text + "\(Date())", valign: valign, duration: duration)
     }
 }
 
