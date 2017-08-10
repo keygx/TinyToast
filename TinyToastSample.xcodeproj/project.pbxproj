@@ -19,6 +19,7 @@
 		36C6D6471F39933700B7142B /* TinyToast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36C6D63F1F39933700B7142B /* TinyToast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36C6D64D1F39939B00B7142B /* TTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64C1F39939B00B7142B /* TTView.swift */; };
 		36C6D64F1F39941B00B7142B /* TTWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64E1F39941B00B7142B /* TTWindow.swift */; };
+		36F7FBCF1F3C23D700F513E7 /* TTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7FBCE1F3C23D700F513E7 /* TTModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		36C6D6421F39933700B7142B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36C6D64C1F39939B00B7142B /* TTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTView.swift; sourceTree = "<group>"; };
 		36C6D64E1F39941B00B7142B /* TTWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTWindow.swift; sourceTree = "<group>"; };
+		36F7FBCE1F3C23D700F513E7 /* TTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				366BC53C1F3AB1D20017DEA8 /* TinyToast.swift */,
 				36C6D64C1F39939B00B7142B /* TTView.swift */,
+				36F7FBCE1F3C23D700F513E7 /* TTModel.swift */,
 				366BC53E1F3AC1DA0017DEA8 /* TTEnum.swift */,
 				36C6D64E1F39941B00B7142B /* TTWindow.swift */,
 				36C6D6411F39933700B7142B /* TinyToast.h */,
@@ -250,6 +253,7 @@
 			files = (
 				36C6D64F1F39941B00B7142B /* TTWindow.swift in Sources */,
 				36C6D64D1F39939B00B7142B /* TTView.swift in Sources */,
+				36F7FBCF1F3C23D700F513E7 /* TTModel.swift in Sources */,
 				366BC53F1F3AC1DA0017DEA8 /* TTEnum.swift in Sources */,
 				366BC53D1F3AB1D20017DEA8 /* TinyToast.swift in Sources */,
 			);

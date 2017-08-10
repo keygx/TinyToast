@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var segVAlign: UISegmentedControl!
     @IBOutlet weak var segDuration: UISegmentedControl!
     
-    let t2 = TinyToast()
+    var message = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,14 +45,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnShowAction(_ sender: UIButton) {
+        message = textView.text
+        
         var valign: TinyToastDisplayVAlign = .center
         switch segVAlign.selectedSegmentIndex {
         case 0:
             valign = .top
+            message += " | .top"
         case 1:
             valign = .center
+            message += " | .center"
         case 2:
             valign = .bottom
+            message += " | .bottom"
         default:
             break
         }
@@ -61,17 +66,32 @@ class ViewController: UIViewController {
         switch segDuration.selectedSegmentIndex {
         case 0:
             duration = .short
+            message += " | .short"
         case 1:
             duration = .normal
+            message += " | .normal"
         case 2:
             duration = .long
+            message += " | .long"
         case 3:
             duration = .longLong
+            message += " | .longLong"
         default:
             break
         }
         
-        t2.show(message: textView.text + "\(Date())", valign: valign, duration: duration)
+        // Show Toast
+        TinyToast.shared.show(message: message, valign: valign, duration: duration)
+    }
+    
+    @IBAction func btnDismissAction(_ sender: UIButton) {
+        // Dismiss first Toast
+        TinyToast.shared.dismiss()
+    }
+    
+    @IBAction func btnDismissAllAction(_ sender: UIButton) {
+        // Dismiss All
+        TinyToast.shared.dismissAll()
     }
 }
 

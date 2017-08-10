@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TinyToastDelegate {
+    func didCompleted()
+}
+
 class TTView {
     private let windowWidthRatio: CGFloat = 0.95 // 95% of parent screen width
     private let windowAlphaValue: CGFloat = 0.85
@@ -16,6 +20,7 @@ class TTView {
     private let fadeDuration: Double = 0.5
 
     private var toastWindow: TTWindow?
+    var delegate: TinyToastDelegate?
     
     // Direction of Statusbar
     private var orientation: UIInterfaceOrientation {
@@ -40,6 +45,7 @@ class TTView {
         // Create UIWindow
         toastWindow = createWindow(orientation: orientation)
         guard let toastWindow = toastWindow else {
+            self.delegate?.didCompleted()
             return
         }
         toastWindow.alpha = 0
@@ -166,6 +172,7 @@ extension TTView {
 extension TTView {
     private func show(_ duration: Double) -> Void {
         guard let toastWindow = toastWindow else {
+            self.delegate?.didCompleted()
             return
         }
         
@@ -194,7 +201,7 @@ extension TTView {
         })
     }
     
-    private func dismiss() -> Void {
+    func dismiss() -> Void {
         // Fade out
         UIView.animate(
             withDuration: fadeDuration,
@@ -208,6 +215,7 @@ extension TTView {
                 (value: Bool) in
                 self.toastWindow?.removeFromSuperview()
                 self.toastWindow = nil
+                self.delegate?.didCompleted()
         })
     }
 }
