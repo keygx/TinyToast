@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		366BC53D1F3AB1D20017DEA8 /* TinyToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366BC53C1F3AB1D20017DEA8 /* TinyToast.swift */; };
-		366BC53F1F3AC1DA0017DEA8 /* TTEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366BC53E1F3AC1DA0017DEA8 /* TTEnum.swift */; };
+		366BC53F1F3AC1DA0017DEA8 /* TinyToastEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366BC53E1F3AC1DA0017DEA8 /* TinyToastEnum.swift */; };
 		3679459F1F3C650100E84746 /* AsyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3679459E1F3C650100E84746 /* AsyncUtil.swift */; };
 		36835DDF1F41892A00592148 /* ButtonWithUL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36835DDE1F41892A00592148 /* ButtonWithUL.swift */; };
 		36C6D6291F39932500B7142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D6281F39932500B7142B /* AppDelegate.swift */; };
@@ -19,10 +19,10 @@
 		36C6D6431F39933700B7142B /* TinyToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 36C6D6411F39933700B7142B /* TinyToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36C6D6461F39933700B7142B /* TinyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C6D63F1F39933700B7142B /* TinyToast.framework */; };
 		36C6D6471F39933700B7142B /* TinyToast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36C6D63F1F39933700B7142B /* TinyToast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36C6D64D1F39939B00B7142B /* TTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64C1F39939B00B7142B /* TTView.swift */; };
-		36C6D64F1F39941B00B7142B /* TTWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64E1F39941B00B7142B /* TTWindow.swift */; };
+		36C6D64D1F39939B00B7142B /* TinyToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64C1F39939B00B7142B /* TinyToastView.swift */; };
+		36C6D64F1F39941B00B7142B /* TinyToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64E1F39941B00B7142B /* TinyToastWindow.swift */; };
 		36EC3D821F3C4CF9004385A9 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC3D811F3C4CF9004385A9 /* StandardButton.swift */; };
-		36F7FBCF1F3C23D700F513E7 /* TTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7FBCE1F3C23D700F513E7 /* TTModel.swift */; };
+		36F7FBCF1F3C23D700F513E7 /* TinyToastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7FBCE1F3C23D700F513E7 /* TinyToastModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 
 /* Begin PBXFileReference section */
 		366BC53C1F3AB1D20017DEA8 /* TinyToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToast.swift; sourceTree = "<group>"; };
-		366BC53E1F3AC1DA0017DEA8 /* TTEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTEnum.swift; sourceTree = "<group>"; };
+		366BC53E1F3AC1DA0017DEA8 /* TinyToastEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastEnum.swift; sourceTree = "<group>"; };
 		3679459E1F3C650100E84746 /* AsyncUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncUtil.swift; sourceTree = "<group>"; };
 		36835DDE1F41892A00592148 /* ButtonWithUL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithUL.swift; sourceTree = "<group>"; };
 		36C6D6251F39932500B7142B /* TinyToastSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyToastSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,10 +64,10 @@
 		36C6D63F1F39933700B7142B /* TinyToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C6D6411F39933700B7142B /* TinyToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinyToast.h; sourceTree = "<group>"; };
 		36C6D6421F39933700B7142B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36C6D64C1F39939B00B7142B /* TTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTView.swift; sourceTree = "<group>"; };
-		36C6D64E1F39941B00B7142B /* TTWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTWindow.swift; sourceTree = "<group>"; };
+		36C6D64C1F39939B00B7142B /* TinyToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastView.swift; sourceTree = "<group>"; };
+		36C6D64E1F39941B00B7142B /* TinyToastWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastWindow.swift; sourceTree = "<group>"; };
 		36EC3D811F3C4CF9004385A9 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
-		36F7FBCE1F3C23D700F513E7 /* TTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTModel.swift; sourceTree = "<group>"; };
+		36F7FBCE1F3C23D700F513E7 /* TinyToastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				366BC53C1F3AB1D20017DEA8 /* TinyToast.swift */,
-				36C6D64C1F39939B00B7142B /* TTView.swift */,
-				36F7FBCE1F3C23D700F513E7 /* TTModel.swift */,
-				366BC53E1F3AC1DA0017DEA8 /* TTEnum.swift */,
-				36C6D64E1F39941B00B7142B /* TTWindow.swift */,
+				36C6D64C1F39939B00B7142B /* TinyToastView.swift */,
+				36F7FBCE1F3C23D700F513E7 /* TinyToastModel.swift */,
+				366BC53E1F3AC1DA0017DEA8 /* TinyToastEnum.swift */,
+				36C6D64E1F39941B00B7142B /* TinyToastWindow.swift */,
 				3679459E1F3C650100E84746 /* AsyncUtil.swift */,
 				36C6D6411F39933700B7142B /* TinyToast.h */,
 				36C6D6421F39933700B7142B /* Info.plist */,
@@ -270,10 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C6D64F1F39941B00B7142B /* TTWindow.swift in Sources */,
-				36C6D64D1F39939B00B7142B /* TTView.swift in Sources */,
-				36F7FBCF1F3C23D700F513E7 /* TTModel.swift in Sources */,
-				366BC53F1F3AC1DA0017DEA8 /* TTEnum.swift in Sources */,
+				36C6D64F1F39941B00B7142B /* TinyToastWindow.swift in Sources */,
+				36C6D64D1F39939B00B7142B /* TinyToastView.swift in Sources */,
+				36F7FBCF1F3C23D700F513E7 /* TinyToastModel.swift in Sources */,
+				366BC53F1F3AC1DA0017DEA8 /* TinyToastEnum.swift in Sources */,
 				3679459F1F3C650100E84746 /* AsyncUtil.swift in Sources */,
 				366BC53D1F3AB1D20017DEA8 /* TinyToast.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  TTEnum.swift
+//  TinyToastEnum.swift
 //  TinyToast
 //
 //  Created by keygx on 2017/08/09.

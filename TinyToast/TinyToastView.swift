@@ -1,5 +1,5 @@
 //
-//  TTView.swift
+//  TinyToastView.swift
 //  TinyToast
 //
 //  Created by keygx on 2017/08/08.
@@ -12,14 +12,14 @@ protocol TinyToastDelegate {
     func didCompleted()
 }
 
-class TTView {
+class TinyToastView {
     private let windowWidthRatio: CGFloat = 0.95 // 95% of parent screen width
     private let windowAlphaValue: CGFloat = 0.85
     private let fontSize: CGFloat = 15.0
     private let margin: CGFloat = 15.0
     private let fadeDuration: Double = 0.5
 
-    private var toastWindow: TTWindow?
+    private var toastWindow: TinyToastWindow?
     var delegate: TinyToastDelegate?
     
     // Direction of Statusbar
@@ -100,18 +100,18 @@ class TTView {
     }
 }
 
-extension TTView {
+extension TinyToastView {
     // Create UIWindow
-    private func createWindow(orientation: UIInterfaceOrientation) -> TTWindow {
+    private func createWindow(orientation: UIInterfaceOrientation) -> TinyToastWindow {
         switch orientation {
         case .landscapeLeft:
             fallthrough
         case .landscapeRight:
             // LandscapeLeft | LandscapeRight
-            return TTWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.height, height: UIScreen.main.bounds.width))
+            return TinyToastWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.height, height: UIScreen.main.bounds.width))
         default:
             // Unknown | Portrait | PortraitUpsideDown
-            return TTWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+            return TinyToastWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         }
     }
     
@@ -169,7 +169,7 @@ extension TTView {
     }
 }
 
-extension TTView {
+extension TinyToastView {
     private func show(_ duration: Double) -> Void {
         guard let toastWindow = toastWindow else {
             self.delegate?.didCompleted()

@@ -1,5 +1,5 @@
 //
-//  TTModel.swift
+//  TinyToastModel.swift
 //  TinyToast
 //
 //  Created by keygx on 2017/08/10.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TTModel {
+struct TinyToastModel {
     var message: String
     var valign: TinyToastDisplayVAlign
     var duration: TinyToastDisplayDuration

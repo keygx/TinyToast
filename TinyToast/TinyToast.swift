@@ -12,9 +12,9 @@ public class TinyToast: TinyToastDelegate {
     // Singlton
     public static let shared = TinyToast()
     // Toast
-    let toast = TTView()
+    let toast = TinyToastView()
     // Queue List
-    var queue: [TTModel] {
+    var queue: [TinyToastModel] {
         didSet {
             if queue.count == 1 {
                 next()
@@ -30,7 +30,7 @@ public class TinyToast: TinyToastDelegate {
     }
     
     private init() {
-        queue = [TTModel]()
+        queue = [TinyToastModel]()
         toast.delegate = self
     }
 }
@@ -38,7 +38,7 @@ public class TinyToast: TinyToastDelegate {
 extension TinyToast {
     public func show(message: String, valign: TinyToastDisplayVAlign = .center, duration: TinyToastDisplayDuration) {
         AsyncUtil.sync {
-            queue.append(TTModel(message: message, valign: valign, duration: duration))
+            queue.append(TinyToastModel(message: message, valign: valign, duration: duration))
         }
     }
     
