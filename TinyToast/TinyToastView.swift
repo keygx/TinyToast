@@ -135,12 +135,12 @@ extension TinyToastView {
         let toastView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: messageLabelWidth + 12 + 12, height: messageLabelHeight + 9 + 9 + 1))
         toastView.backgroundColor = UIColor.black
         toastView.isUserInteractionEnabled = false
-        toastView.layer.cornerRadius = 7.0
-        toastView.layer.borderColor = UIColor.gray.cgColor
+        toastView.layer.cornerRadius = 8.0
+        toastView.layer.borderColor = UIColor(red: 0.05, green: 0.05, blue: 0.05, alpha: 0.95).cgColor
         toastView.layer.borderWidth = 1
         toastView.layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
-        toastView.layer.shadowColor = UIColor.black.cgColor
-        toastView.layer.shadowOpacity = 0.3
+        toastView.layer.shadowColor = UIColor.darkGray.cgColor
+        toastView.layer.shadowOpacity = 0.4
         return toastView
     }
     
