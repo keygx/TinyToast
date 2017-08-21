@@ -15,13 +15,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var segVAlign: UISegmentedControl!
     @IBOutlet weak var segDuration: UISegmentedControl!
     
-    var message = ""
+    let message = "TinyToast is simple toast library in Swift."
+    var valign: TinyToastDisplayVAlign = .center
+    var duration: TinyToastDisplayDuration = .normal
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         segVAlign.selectedSegmentIndex = 1
         segDuration.selectedSegmentIndex = 1
+        updateTextView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,52 +39,56 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
+    func updateTextView() {
+        var v = ""
+        switch segVAlign.selectedSegmentIndex {
+        case 0:
+            valign = .top
+            v = " | .top"
+        case 1:
+            valign = .center
+            v = " | .center"
+        case 2:
+            valign = .bottom
+            v = " | .bottom"
+        default:
+            break
+        }
+        
+        var d = ""
+        switch segDuration.selectedSegmentIndex {
+        case 0:
+            duration = .short
+            d = " | .short"
+        case 1:
+            duration = .normal
+            d = " | .normal"
+        case 2:
+            duration = .long
+            d = " | .long"
+        case 3:
+            duration = .longLong
+            d = " | .longLong"
+        default:
+            break
+        }
+        
+        textView.text = message + v + d
+    }
+    
     @IBAction func segVAlign(_ sender: UISegmentedControl) {
         segVAlign.selectedSegmentIndex = sender.selectedSegmentIndex
+        updateTextView()
     }
     
     @IBAction func segDuration(_ sender: UISegmentedControl) {
         segDuration.selectedSegmentIndex = sender.selectedSegmentIndex
+        updateTextView()
     }
     
     @IBAction func btnShowAction(_ sender: StandardButton) {
-        message = textView.text
-        
-        var valign: TinyToastDisplayVAlign = .center
-        switch segVAlign.selectedSegmentIndex {
-        case 0:
-            valign = .top
-            message += " | .top"
-        case 1:
-            valign = .center
-            message += " | .center"
-        case 2:
-            valign = .bottom
-            message += " | .bottom"
-        default:
-            break
-        }
-        
-        var duration: TinyToastDisplayDuration = .normal
-        switch segDuration.selectedSegmentIndex {
-        case 0:
-            duration = .short
-            message += " | .short"
-        case 1:
-            duration = .normal
-            message += " | .normal"
-        case 2:
-            duration = .long
-            message += " | .long"
-        case 3:
-            duration = .longLong
-            message += " | .longLong"
-        default:
-            break
-        }
-        
         // Show Toast
-        TinyToast.shared.show(message: message, valign: valign, duration: duration)
+        TinyToast.shared.show(message: textView.text!, valign: valign, duration: duration)
     }
     
     @IBAction func btnDismissAction(_ sender: StandardButton) {
