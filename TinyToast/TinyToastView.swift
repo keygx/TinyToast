@@ -41,7 +41,7 @@ class TinyToastView {
     
     init() {}
     
-    func show(message: String, valign: TinyToastDisplayVAlign = .center, duration: TinyToastDisplayDuration) -> Void {
+    func show(message: String, valign: TinyToastDisplayVAlign = .center, duration: TimeInterval) -> Void {
         // Create UIWindow
         toastWindow = createWindow(orientation: orientation)
         guard let toastWindow = toastWindow else {
@@ -96,7 +96,7 @@ class TinyToastView {
         }
         
         // Show Toast
-        self.show(duration.getDurationTime())
+        self.show(duration)
     }
 }
 
@@ -190,7 +190,7 @@ extension TinyToastView {
             animations: {
                 toastWindow.alpha = self.windowAlphaValue
                 return
-        },
+            },
             completion:nil)
         
         // Toast display duration
@@ -208,7 +208,7 @@ extension TinyToastView {
             animations: {
                 self.toastWindow?.alpha = 0
                 return
-        },
+            },
             completion: {
                 (value: Bool) in
                 self.toastWindow?.removeFromSuperview()

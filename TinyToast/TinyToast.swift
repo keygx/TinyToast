@@ -36,7 +36,15 @@ public class TinyToast: TinyToastDelegate {
 }
 
 extension TinyToast {
+    // Duration: Pre-Settings
     public func show(message: String, valign: TinyToastDisplayVAlign = .center, duration: TinyToastDisplayDuration) {
+        AsyncUtil.sync {
+            queue.append(TinyToastModel(message: message, valign: valign, duration: duration.getDurationTime()))
+        }
+    }
+    
+    // Duration: User Setting
+    public func show(message: String, valign: TinyToastDisplayVAlign = .center, duration: TimeInterval) {
         AsyncUtil.sync {
             queue.append(TinyToastModel(message: message, valign: valign, duration: duration))
         }
