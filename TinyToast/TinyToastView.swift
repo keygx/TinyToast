@@ -72,24 +72,24 @@ class TinyToastView {
         case .top:
             switch angle.1 {
             case .up:
-                toastView.frame.origin.y = margin
+                toastView.frame.origin.y = margin + getExtraMargin(orientation: .up, valign: .top)
             case .left:
-                toastView.frame.origin.x = margin
+                toastView.frame.origin.x = margin + getExtraMargin(orientation: .left, valign: .top)
             case .right:
-                toastView.frame.origin.x = toastWindow.frame.width - toastView.frame.width - margin
+                toastView.frame.origin.x = toastWindow.frame.width - toastView.frame.width - margin - getExtraMargin(orientation: .right, valign: .top)
             case .down:
-                toastView.frame.origin.y = toastWindow.frame.height - toastView.frame.height - margin
+                toastView.frame.origin.y = toastWindow.frame.height - toastView.frame.height - margin - getExtraMargin(orientation: .down, valign: .top)
             }
         case .bottom:
             switch angle.1 {
             case .up:
-                toastView.frame.origin.y = toastWindow.frame.height - toastView.frame.height - margin
+                toastView.frame.origin.y = toastWindow.frame.height - toastView.frame.height - margin - getExtraMargin(orientation: .up, valign: .bottom)
             case .left:
-                toastView.frame.origin.x = toastWindow.frame.width - toastView.frame.width - margin
+                toastView.frame.origin.x = toastWindow.frame.width - toastView.frame.width - margin - getExtraMargin(orientation: .left, valign: .bottom)
             case .right:
-                toastView.frame.origin.x = margin
+                toastView.frame.origin.x = margin + getExtraMargin(orientation: .right, valign: .bottom)
             case .down:
-                toastView.frame.origin.y = margin
+                toastView.frame.origin.y = margin + getExtraMargin(orientation: .down, valign: .bottom)
             }
         default:
             break
@@ -215,5 +215,44 @@ extension TinyToastView {
                 self.toastWindow = nil
                 self.delegate?.didCompleted()
         })
+    }
+}
+
+extension TinyToastView {
+    var is_iPhoneX: Bool {
+        guard #available(iOS 11.0, *), UIDevice().userInterfaceIdiom == .phone else {
+                return false
+        }
+        
+        let nativeSize = UIScreen.main.nativeBounds.size
+        let (w, h) = (nativeSize.width, nativeSize.height)
+        let (d1, d2): (CGFloat, CGFloat) = (1125.0, 2436.0)
+        
+        return (w == d1 && h == d2) || (w == d2 && h == d1)
+    }
+    
+    func getExtraMargin(orientation: TinyToastDisplayDirection, valign: TinyToastDisplayVAlign) -> CGFloat {
+        switch orientation {
+        case .up:
+            switch valign {
+            case .top:
+                return is_iPhoneX ? 30.0 : 0.0
+            case .bottom:
+                return is_iPhoneX ? 25.0 : 0.0
+            default:
+                return 0.0
+            }
+        case .left, .right:
+            switch valign {
+            case .top:
+                return 0.0
+            case .bottom:
+                return is_iPhoneX ? 20.0 : 0.0
+            default:
+                return 0.0
+            }
+        default:
+            return 0.0
+        }
     }
 }
