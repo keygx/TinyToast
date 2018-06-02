@@ -3,7 +3,7 @@
 TinyToast is simple toast library in Swift.
 
 ## Requirements
-- Swift 4.0
+- Swift 4.1
 - iOS 9.0 or later
 
 ## Installation
