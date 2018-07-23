@@ -25,7 +25,7 @@ class ButtonWithUL: UIButton {
         // Underline
         let text: String = (titleLabel?.text)!
         let attributeText = NSMutableAttributedString(string: text)
-        attributeText.addAttribute(NSAttributedStringKey.underlineStyle, value: NSUnderlineStyle.styleSingle.rawValue, range: NSMakeRange(0, attributeText.length))
+        attributeText.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0, attributeText.length))
         titleLabel?.attributedText = attributeText
     }
     
