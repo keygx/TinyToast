@@ -50,7 +50,7 @@ class TinyToastView {
         }
         toastWindow.alpha = 0
         toastWindow.isUserInteractionEnabled = false
-        toastWindow.windowLevel = UIWindowLevelNormal
+        toastWindow.windowLevel = UIWindow.Level.normal
         
         // Create Label
         let messageLabel = createMessageLabel(message: message)
@@ -186,7 +186,7 @@ extension TinyToastView {
         UIView.animate(
             withDuration: fadeDuration,
             delay: 0,
-            options: UIViewAnimationOptions.curveEaseIn,
+            options: UIView.AnimationOptions.curveEaseIn,
             animations: {
                 toastWindow.alpha = self.windowAlphaValue
                 return
@@ -204,7 +204,7 @@ extension TinyToastView {
         UIView.animate(
             withDuration: fadeDuration,
             delay: 0,
-            options: UIViewAnimationOptions.curveEaseIn,
+            options: UIView.AnimationOptions.curveEaseIn,
             animations: {
                 self.toastWindow?.alpha = 0
                 return
