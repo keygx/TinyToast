@@ -3,35 +3,24 @@
 TinyToast is simple toast library in Swift.
 
 ## Requirements
-- Swift 4.2
+- Swift 5
 - iOS 9.0 or later
 
 ## Installation
 
 ### Carthage
 
-* Cartfile
-
 ```Cartfile
 github "keygx/TinyToast"
 ```
-or
 
-```Cartfile
-github "keygx/TinyToast" "branch-name"
-```
-or
+### Swift versions support
 
-```Cartfile
-github "keygx/TinyToast" "tag"
-```
+- Swift 5, tag "swift5"
+- Swift 4.2, tag "swift4.2"
+- Swift 4.1, tag "swift4.1"
+- Swift 4.0, tag "swift4.0"
 
-* install
-
-```
-$ carthage update
-```
-To integrate "TinyToast.framework" into your Xcode project
 
 ## Usage
 
