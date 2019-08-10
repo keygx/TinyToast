@@ -219,26 +219,20 @@ extension TinyToastView {
 }
 
 extension TinyToastView {
-    var is_iPhoneX: Bool {
-        guard #available(iOS 11.0, *), UIDevice().userInterfaceIdiom == .phone else {
-                return false
-        }
-        
-        let nativeSize = UIScreen.main.nativeBounds.size
-        let (w, h) = (nativeSize.width, nativeSize.height)
-        let (d1, d2): (CGFloat, CGFloat) = (1125.0, 2436.0)
-        
-        return (w == d1 && h == d2) || (w == d2 && h == d1)
-    }
-    
     func getExtraMargin(orientation: TinyToastDisplayDirection, valign: TinyToastDisplayVAlign) -> CGFloat {
         switch orientation {
         case .up:
             switch valign {
             case .top:
-                return is_iPhoneX ? 30.0 : 0.0
+                return UIApplication.shared.statusBarFrame.size.height > 0.0
+                    ? UIApplication.shared.statusBarFrame.size.height - 14.0 : 0.0
             case .bottom:
-                return is_iPhoneX ? 25.0 : 0.0
+                if #available(iOS 11.0, *) {
+                    return UIApplication.shared.keyWindow!.safeAreaInsets.bottom > 0.0
+                        ? UIApplication.shared.keyWindow!.safeAreaInsets.bottom - 14.0 : 0.0
+                } else {
+                    return 0.0
+                }
             default:
                 return 0.0
             }
@@ -247,7 +241,12 @@ extension TinyToastView {
             case .top:
                 return 0.0
             case .bottom:
-                return is_iPhoneX ? 20.0 : 0.0
+                if #available(iOS 11.0, *) {
+                    return UIApplication.shared.keyWindow!.safeAreaInsets.bottom > 0.0
+                        ? UIApplication.shared.keyWindow!.safeAreaInsets.bottom - 6.0 : 0.0
+                } else {
+                    return 0.0
+                }
             default:
                 return 0.0
             }
