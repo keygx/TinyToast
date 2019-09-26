@@ -19,16 +19,15 @@ class TinyToastView {
     private let margin: CGFloat = 15.0
     private let fadeDuration: Double = 0.5
 
-    private var toastWindow: TinyToastWindow?
+    private var toastWindow: UIWindow?
     var delegate: TinyToastDelegate?
     
-    // Direction of Statusbar
-    private var orientation: UIInterfaceOrientation {
-        return UIApplication.shared.statusBarOrientation
-    }
     // Size of ToastView
     private var toastViewRect: CGRect {
-        return CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width * windowWidthRatio, height: UIScreen.main.bounds.height)
+        return CGRect(x: 0,
+                      y: 0,
+                      width: UIScreen.main.bounds.width * windowWidthRatio,
+                      height: UIScreen.main.bounds.height)
     }
     // Charactors counts of 1 line
     private var oneLineLength: CGFloat {
@@ -43,57 +42,74 @@ class TinyToastView {
     
     func show(message: String, valign: TinyToastDisplayVAlign = .center, duration: TimeInterval) -> Void {
         // Create UIWindow
-        toastWindow = createWindow(orientation: orientation)
+        toastWindow = createWindow(orientation: TinyToastViewController.orientation)
         guard let toastWindow = toastWindow else {
             self.delegate?.didCompleted()
             return
         }
-        toastWindow.alpha = 0
-        toastWindow.isUserInteractionEnabled = false
-        toastWindow.windowLevel = UIWindow.Level.normal
+        
+        // RootViewController
+        let tinyToastViewController = TinyToastViewController()
         
         // Create Label
         let messageLabel = createMessageLabel(message: message)
         
         // Create Toast
-        let toastView = createToastView(messageLabelWidth: messageLabel.bounds.width, messageLabelHeight: messageLabel.bounds.height)
+        let toastView = createToastView(messageLabelWidth: messageLabel.bounds.width,
+                                        messageLabelHeight: messageLabel.bounds.height)
         toastView.addSubview(messageLabel)
         
         // Rotate Toast View
-        let angle = getAngle(orientation: orientation)
+        let angle = getAngle(orientation: TinyToastViewController.orientation)
         toastView.transform = CGAffineTransform(rotationAngle: angle.0)
-        toastWindow.addSubview(toastView)
+        tinyToastViewController.view.addSubview(toastView)
         
         // Centering
-        toastView.center = toastWindow.center
+        toastView.center = tinyToastViewController.view.center
         
         // Toast View Position
         switch valign {
         case .top:
             switch angle.1 {
             case .up:
-                toastView.frame.origin.y = margin + getExtraMargin(orientation: .up, valign: .top)
+                toastView.frame.origin.y =
+                    margin + getExtraMargin(orientation: .up, valign: .top)
             case .left:
-                toastView.frame.origin.x = margin + getExtraMargin(orientation: .left, valign: .top)
+                toastView.frame.origin.x =
+                    margin + getExtraMargin(orientation: .left, valign: .top)
             case .right:
-                toastView.frame.origin.x = toastWindow.frame.width - toastView.frame.width - margin - getExtraMargin(orientation: .right, valign: .top)
+                toastView.frame.origin.x =
+                    toastWindow.frame.width - toastView.frame.width
+                    - margin - getExtraMargin(orientation: .right, valign: .top)
             case .down:
-                toastView.frame.origin.y = toastWindow.frame.height - toastView.frame.height - margin - getExtraMargin(orientation: .down, valign: .top)
+                toastView.frame.origin.y =
+                    toastWindow.frame.height - toastView.frame.height
+                    - margin - getExtraMargin(orientation: .down, valign: .top)
             }
         case .bottom:
             switch angle.1 {
             case .up:
-                toastView.frame.origin.y = toastWindow.frame.height - toastView.frame.height - margin - getExtraMargin(orientation: .up, valign: .bottom)
+                toastView.frame.origin.y =
+                    toastWindow.frame.height - toastView.frame.height
+                    - margin - getExtraMargin(orientation: .up, valign: .bottom)
             case .left:
-                toastView.frame.origin.x = toastWindow.frame.width - toastView.frame.width - margin - getExtraMargin(orientation: .left, valign: .bottom)
+                toastView.frame.origin.x =
+                    toastWindow.frame.width - toastView.frame.width
+                    - margin - getExtraMargin(orientation: .left, valign: .bottom)
             case .right:
-                toastView.frame.origin.x = margin + getExtraMargin(orientation: .right, valign: .bottom)
+                toastView.frame.origin.x =
+                    margin + getExtraMargin(orientation: .right, valign: .bottom)
             case .down:
-                toastView.frame.origin.y = margin + getExtraMargin(orientation: .down, valign: .bottom)
+                toastView.frame.origin.y =
+                    margin + getExtraMargin(orientation: .down, valign: .bottom)
             }
         default:
             break
         }
+        
+        toastWindow.alpha = 0
+        toastWindow.isUserInteractionEnabled = false
+        toastWindow.rootViewController = tinyToastViewController
         
         // Show Toast
         self.show(duration)
@@ -102,17 +118,8 @@ class TinyToastView {
 
 extension TinyToastView {
     // Create UIWindow
-    private func createWindow(orientation: UIInterfaceOrientation) -> TinyToastWindow {
-        switch orientation {
-        case .landscapeLeft:
-            fallthrough
-        case .landscapeRight:
-            // LandscapeLeft | LandscapeRight
-            return TinyToastWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.height, height: UIScreen.main.bounds.width))
-        default:
-            // Unknown | Portrait | PortraitUpsideDown
-            return TinyToastWindow(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        }
+    private func createWindow(orientation: UIInterfaceOrientation) -> UIWindow {
+        return WindowBuilder.build(frame: UIScreen.main.bounds, orientation: orientation)
     }
     
     // Create Label
@@ -149,21 +156,12 @@ extension TinyToastView {
      * View does not rotate automatically, so it fits the screen.
      */
     private func getAngle(orientation: UIInterfaceOrientation) -> (CGFloat, TinyToastDisplayDirection) {
-        switch (orientation) {
-        case .portrait:
-            // Portrait
+        switch orientation {
+        case .portrait, .landscapeLeft, .landscapeRight:
             return (CGFloat(0.0 * CGFloat.pi / 180.0), .up)
         case .portraitUpsideDown:
-            // PortraitUpsideDown
             return (CGFloat(180.0 * CGFloat.pi / 180.0), .down)
-        case .landscapeLeft:
-            // LandscapeLeft
-            return (CGFloat(-90.0 * CGFloat.pi / 180.0), .left)
-        case .landscapeRight:
-            // LandscapeRight
-            return (CGFloat(90.0 * CGFloat.pi / 180.0), .right)
         default:
-            // Unknown
             return (CGFloat(0.0 * CGFloat.pi / 180.0), .up)
         }
     }
@@ -175,12 +173,6 @@ extension TinyToastView {
             self.delegate?.didCompleted()
             return
         }
-        
-        // Make baseWindow keyWindow
-        toastWindow.makeKey()
-        
-        // Display baseWindow
-        toastWindow.makeKeyAndVisible()
         
         // Fade in
         UIView.animate(
