@@ -10,7 +10,7 @@ import Foundation
 
 let serialQueue = DispatchQueue(label: "tinytoast.queue.serial", attributes: [])
 
-class AsyncUtil {
+final class AsyncUtil {
     class func onMainThread(_ block: @escaping () -> Void, delay: Double) {
         if delay == 0.0 {
             DispatchQueue.main.async {

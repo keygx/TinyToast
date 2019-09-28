@@ -27,6 +27,7 @@ final class WindowBuilder {
         baseWindow.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
         baseWindow.backgroundColor = UIColor.clear
         baseWindow.windowLevel = UIWindow.Level.normal
+        baseWindow.isUserInteractionEnabled = false
         baseWindow.makeKey()
         baseWindow.makeKeyAndVisible()
         
