@@ -9,13 +9,28 @@
 import UIKit
 
 class ButtonWithUL: UIButton {
-    let blue = UIColor(red: 10.0/255.0, green: 126.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-    let white = UIColor.white
+    var white: UIColor {
+        if #available(iOS 13.0, *) {
+            if self.isDarkMode {
+                return UIColor.tertiarySystemFill
+            }
+            return UIColor.white
+        } else {
+            return UIColor.white
+        }
+    }
+    var blue: UIColor {
+        if #available(iOS 13.0, *) {
+            return UIColor.link
+        } else {
+            return UIColor(red: 10.0/255.0, green: 126.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        }
+    }
     
     override func draw(_ rect: CGRect) {
         clipsToBounds = true
         setTitleColor(blue, for: .normal)
-        setTitleColor(white, for: .highlighted)
+        setTitleColor(UIColor.white, for: .highlighted)
         setBackgroundImage(createViewToImage(color: white), for: .normal)
         setBackgroundImage(createViewToImage(color: blue), for: .highlighted)
         layer.cornerRadius = 6.0

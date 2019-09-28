@@ -15,6 +15,7 @@
 		368CBCE2233E562200602848 /* TinyToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCE1233E562200602848 /* TinyToastViewController.swift */; };
 		368CBCE4233F170300602848 /* AppEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCE3233F170300602848 /* AppEventHandler.swift */; };
 		368CBCE6233F173000602848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCE5233F173000602848 /* SceneDelegate.swift */; };
+		368CBCEA233F942400602848 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCE9233F942400602848 /* UIView+Ex.swift */; };
 		36C6D6291F39932500B7142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D6281F39932500B7142B /* AppDelegate.swift */; };
 		36C6D62B1F39932500B7142B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D62A1F39932500B7142B /* ViewController.swift */; };
 		36C6D62E1F39932500B7142B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C6D62C1F39932500B7142B /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		368CBCE1233E562200602848 /* TinyToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastViewController.swift; sourceTree = "<group>"; };
 		368CBCE3233F170300602848 /* AppEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEventHandler.swift; sourceTree = "<group>"; };
 		368CBCE5233F173000602848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		368CBCE9233F942400602848 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		36C6D6251F39932500B7142B /* TinyToastSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyToastSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C6D6281F39932500B7142B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C6D62A1F39932500B7142B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				36EC3D811F3C4CF9004385A9 /* StandardButton.swift */,
 				36835DDE1F41892A00592148 /* ButtonWithUL.swift */,
+				368CBCE9233F942400602848 /* UIView+Ex.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				368CBCE4233F170300602848 /* AppEventHandler.swift in Sources */,
 				36EC3D821F3C4CF9004385A9 /* StandardButton.swift in Sources */,
 				368CBCE6233F173000602848 /* SceneDelegate.swift in Sources */,
+				368CBCEA233F942400602848 /* UIView+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
