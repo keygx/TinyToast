@@ -14,7 +14,7 @@ protocol TinyToastDelegate {
 
 class TinyToastView {
     private let windowWidthRatio: CGFloat = 0.95 // 95% of parent screen width
-    private let windowAlphaValue: CGFloat = 0.85
+    private let windowAlphaValue: CGFloat = 0.95
     private let fontSize: CGFloat = 15.0
     private let margin: CGFloat = 15.0
     private let fadeDuration: Double = 0.5
@@ -52,11 +52,11 @@ class TinyToastView {
         let tinyToastViewController = TinyToastViewController()
         
         // Create Label
-        let messageLabel = createMessageLabel(message: message)
+        let messageLabel = createMessageLabel(message: message, isDarkMode: toastWindow.isDarkMode)
         
         // Create Toast
         let toastView = createToastView(messageLabelWidth: messageLabel.bounds.width,
-                                        messageLabelHeight: messageLabel.bounds.height)
+                                        messageLabelHeight: messageLabel.bounds.height, isDarkMode: toastWindow.isDarkMode)
         toastView.addSubview(messageLabel)
         
         // Rotate Toast View
@@ -123,30 +123,40 @@ extension TinyToastView {
     }
     
     // Create Label
-    private func createMessageLabel(message: String) -> UILabel {
+    private func createMessageLabel(message: String, isDarkMode: Bool) -> UILabel {
         let messageLabel: UILabel = UILabel(frame: CGRect(x: 12, y: 9, width: labelWidth, height: 10))
         messageLabel.backgroundColor = UIColor.clear
         messageLabel.isUserInteractionEnabled = false
         messageLabel.text = message
         messageLabel.font = UIFont.systemFont(ofSize: fontSize)
-        messageLabel.textColor = UIColor.white
         messageLabel.textAlignment = NSTextAlignment.left
         messageLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         messageLabel.numberOfLines = 0
         messageLabel.sizeToFit()
+        if isDarkMode {
+            messageLabel.textColor = UIColor.darkGray
+        } else {
+           messageLabel.textColor = UIColor.white
+        }
         return messageLabel
     }
     
     // Create Toast View
-    private func createToastView(messageLabelWidth: CGFloat, messageLabelHeight: CGFloat) -> UIView {
+    private func createToastView(messageLabelWidth: CGFloat, messageLabelHeight: CGFloat, isDarkMode: Bool) -> UIView {
         let toastView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: messageLabelWidth + 12 + 12, height: messageLabelHeight + 9 + 9 + 1))
-        toastView.backgroundColor = UIColor.black
+        if isDarkMode {
+            toastView.backgroundColor = UIColor.white
+            toastView.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0).cgColor
+            toastView.layer.shadowColor = UIColor.lightGray.cgColor
+        } else {
+            toastView.backgroundColor = UIColor.black
+            toastView.layer.borderColor = UIColor(red: 0.05, green: 0.05, blue: 0.05, alpha: 0.95).cgColor
+            toastView.layer.shadowColor = UIColor.darkGray.cgColor
+        }
         toastView.isUserInteractionEnabled = false
         toastView.layer.cornerRadius = 8.0
-        toastView.layer.borderColor = UIColor(red: 0.05, green: 0.05, blue: 0.05, alpha: 0.95).cgColor
         toastView.layer.borderWidth = 1
         toastView.layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
-        toastView.layer.shadowColor = UIColor.darkGray.cgColor
         toastView.layer.shadowOpacity = 0.4
         return toastView
     }
