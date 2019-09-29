@@ -3,7 +3,7 @@
 TinyToast is simple toast library in Swift.
 
 ## Requirements
-- Swift 5
+- Swift 5.1
 - iOS 9.0 or later
 
 ## Installation
@@ -16,6 +16,7 @@ github "keygx/TinyToast"
 
 ### Swift versions support
 
+- Swift 5.1, tag "swift5.1"
 - Swift 5, tag "swift5"
 - Swift 4.2, tag "swift4.2"
 - Swift 4.1, tag "swift4.1"
@@ -50,20 +51,34 @@ TinyToast.shared.dismissAll()
 
 ## Screenshots
 
-![](images/scr_port_top.png) ![](images/scr_land_top.png)
-```Swift
-TinyToast.shared.show(message: "TinyToast ...", valign: .top, duration: .normal)
-```
+- Support to iOS13 and Dark Mode
 
-![](images/scr_port_center.png) ![](images/scr_land_center.png)
-```Swift
-TinyToast.shared.show(message: "TinyToast ...", valign: .center, duration: .normal)
-```
+| Light | Dark |
+|:---:|:---:|
+| .top | .top |
+| ![](images/portrait_top_light.png) | ![](images/portrait_top_dark.png) |
+| .center | .center |
+| ![](images/portrait_center_light.png) | ![](images/portrait_center_dark.png) |
+| .bottom | .bottom |
+| ![](images/portrait_bottom_light.png) | ![](images/portrait_bottom_dark.png) |
 
-![](images/scr_port_bottom.png) ![](images/scr_land_bottom.png)
-```Swift
-TinyToast.shared.show(message: "TinyToast ...", valign: .bottom, duration: .normal)
-```
+| Light |
+|:---:|
+| .top |
+| ![](images/landscape_top_light.png) |
+| .center |
+| ![](images/landscape_center_light.png) |
+| .bottom |
+| ![](images/landscape_bottom_light.png) |
+
+| Dark |
+|:---:|
+| .top |
+| ![](images/landscape_top_dark.png) |
+| .center |
+| ![](images/landscape_center_dark.png) |
+| .bottom |
+| ![](images/landscape_bottom_dark.png) |
 
 ## License
 
