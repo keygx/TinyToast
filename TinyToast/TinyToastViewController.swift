@@ -125,7 +125,7 @@ extension TinyToastViewController {
     private func createMessageLabel(message: String) -> UILabel {
         let messageLabel: UILabel = UILabel(frame: CGRect(x: 12, y: 9, width: labelWidth, height: 10))
         if view.isDarkMode {
-            messageLabel.textColor = UIColor.darkGray
+            messageLabel.textColor = UIColor.black
         } else {
            messageLabel.textColor = UIColor.white
         }
@@ -144,18 +144,17 @@ extension TinyToastViewController {
     private func createToastView(messageLabelWidth: CGFloat, messageLabelHeight: CGFloat) -> UIView {
         let toastView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: messageLabelWidth + 12 + 12, height: messageLabelHeight + 9 + 9 + 1))
         if view.isDarkMode {
-            toastView.backgroundColor = UIColor.white
-            toastView.layer.borderColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 0.98).cgColor
-            toastView.layer.shadowColor = UIColor.white.cgColor
+            toastView.backgroundColor = UIColor(red: 120.0/255.0, green: 120.0/255.0, blue: 128.0/255.0, alpha: 0.98)
+            toastView.layer.borderColor = UIColor(red: 60.0/255.0, green: 60.0/255.0, blue: 67.0/255.0, alpha: 0.98).cgColor
         } else {
             toastView.backgroundColor = UIColor.black
             toastView.layer.borderColor = UIColor(red: 0.05, green: 0.05, blue: 0.05, alpha: 0.95).cgColor
-            toastView.layer.shadowColor = UIColor.darkGray.cgColor
         }
         toastView.isUserInteractionEnabled = false
         toastView.layer.cornerRadius = 8.0
         toastView.layer.borderWidth = 1.0
         toastView.layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
+        toastView.layer.shadowColor = UIColor.darkGray.cgColor
         toastView.layer.shadowOpacity = 0.4
         return toastView
     }
