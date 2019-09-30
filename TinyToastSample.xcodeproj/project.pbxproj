@@ -3,14 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3667E10F233A5F54002CCD9C /* WindowBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3667E10E233A5F54002CCD9C /* WindowBuilder.swift */; };
 		366BC53D1F3AB1D20017DEA8 /* TinyToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366BC53C1F3AB1D20017DEA8 /* TinyToast.swift */; };
 		366BC53F1F3AC1DA0017DEA8 /* TinyToastEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366BC53E1F3AC1DA0017DEA8 /* TinyToastEnum.swift */; };
 		3679459F1F3C650100E84746 /* AsyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3679459E1F3C650100E84746 /* AsyncUtil.swift */; };
 		36835DDF1F41892A00592148 /* ButtonWithUL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36835DDE1F41892A00592148 /* ButtonWithUL.swift */; };
+		368CBCE2233E562200602848 /* TinyToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCE1233E562200602848 /* TinyToastViewController.swift */; };
+		368CBCE4233F170300602848 /* AppEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCE3233F170300602848 /* AppEventHandler.swift */; };
+		368CBCE6233F173000602848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCE5233F173000602848 /* SceneDelegate.swift */; };
+		368CBCEA233F942400602848 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCE9233F942400602848 /* UIView+Ex.swift */; };
+		368CBCEE233F975F00602848 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCED233F975F00602848 /* UIView+Ex.swift */; };
+		368CBCF0233FB5DA00602848 /* TinyToastHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CBCEF233FB5DA00602848 /* TinyToastHandler.swift */; };
 		36C6D6291F39932500B7142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D6281F39932500B7142B /* AppDelegate.swift */; };
 		36C6D62B1F39932500B7142B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D62A1F39932500B7142B /* ViewController.swift */; };
 		36C6D62E1F39932500B7142B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36C6D62C1F39932500B7142B /* Main.storyboard */; };
@@ -19,8 +26,6 @@
 		36C6D6431F39933700B7142B /* TinyToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 36C6D6411F39933700B7142B /* TinyToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36C6D6461F39933700B7142B /* TinyToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C6D63F1F39933700B7142B /* TinyToast.framework */; };
 		36C6D6471F39933700B7142B /* TinyToast.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36C6D63F1F39933700B7142B /* TinyToast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		36C6D64D1F39939B00B7142B /* TinyToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64C1F39939B00B7142B /* TinyToastView.swift */; };
-		36C6D64F1F39941B00B7142B /* TinyToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C6D64E1F39941B00B7142B /* TinyToastWindow.swift */; };
 		36EC3D821F3C4CF9004385A9 /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC3D811F3C4CF9004385A9 /* StandardButton.swift */; };
 		36F7FBCF1F3C23D700F513E7 /* TinyToastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7FBCE1F3C23D700F513E7 /* TinyToastModel.swift */; };
 /* End PBXBuildFile section */
@@ -50,10 +55,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3667E10E233A5F54002CCD9C /* WindowBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowBuilder.swift; sourceTree = "<group>"; };
 		366BC53C1F3AB1D20017DEA8 /* TinyToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToast.swift; sourceTree = "<group>"; };
 		366BC53E1F3AC1DA0017DEA8 /* TinyToastEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastEnum.swift; sourceTree = "<group>"; };
 		3679459E1F3C650100E84746 /* AsyncUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncUtil.swift; sourceTree = "<group>"; };
 		36835DDE1F41892A00592148 /* ButtonWithUL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithUL.swift; sourceTree = "<group>"; };
+		368CBCE1233E562200602848 /* TinyToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastViewController.swift; sourceTree = "<group>"; };
+		368CBCE3233F170300602848 /* AppEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEventHandler.swift; sourceTree = "<group>"; };
+		368CBCE5233F173000602848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		368CBCE9233F942400602848 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		368CBCED233F975F00602848 /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		368CBCEF233FB5DA00602848 /* TinyToastHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastHandler.swift; sourceTree = "<group>"; };
 		36C6D6251F39932500B7142B /* TinyToastSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyToastSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C6D6281F39932500B7142B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36C6D62A1F39932500B7142B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,8 +76,6 @@
 		36C6D63F1F39933700B7142B /* TinyToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C6D6411F39933700B7142B /* TinyToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TinyToast.h; sourceTree = "<group>"; };
 		36C6D6421F39933700B7142B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36C6D64C1F39939B00B7142B /* TinyToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastView.swift; sourceTree = "<group>"; };
-		36C6D64E1F39941B00B7142B /* TinyToastWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastWindow.swift; sourceTree = "<group>"; };
 		36EC3D811F3C4CF9004385A9 /* StandardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		36F7FBCE1F3C23D700F513E7 /* TinyToastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyToastModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +122,8 @@
 			children = (
 				36EC3D801F3C4C8D004385A9 /* Styles */,
 				36C6D6281F39932500B7142B /* AppDelegate.swift */,
+				368CBCE5233F173000602848 /* SceneDelegate.swift */,
+				368CBCE3233F170300602848 /* AppEventHandler.swift */,
 				36C6D62A1F39932500B7142B /* ViewController.swift */,
 				36C6D62C1F39932500B7142B /* Main.storyboard */,
 				36C6D62F1F39932500B7142B /* Assets.xcassets */,
@@ -125,11 +137,13 @@
 			isa = PBXGroup;
 			children = (
 				366BC53C1F3AB1D20017DEA8 /* TinyToast.swift */,
-				36C6D64C1F39939B00B7142B /* TinyToastView.swift */,
+				368CBCEF233FB5DA00602848 /* TinyToastHandler.swift */,
+				368CBCE1233E562200602848 /* TinyToastViewController.swift */,
 				36F7FBCE1F3C23D700F513E7 /* TinyToastModel.swift */,
 				366BC53E1F3AC1DA0017DEA8 /* TinyToastEnum.swift */,
-				36C6D64E1F39941B00B7142B /* TinyToastWindow.swift */,
+				3667E10E233A5F54002CCD9C /* WindowBuilder.swift */,
 				3679459E1F3C650100E84746 /* AsyncUtil.swift */,
+				368CBCED233F975F00602848 /* UIView+Ex.swift */,
 				36C6D6411F39933700B7142B /* TinyToast.h */,
 				36C6D6421F39933700B7142B /* Info.plist */,
 			);
@@ -141,6 +155,7 @@
 			children = (
 				36EC3D811F3C4CF9004385A9 /* StandardButton.swift */,
 				36835DDE1F41892A00592148 /* ButtonWithUL.swift */,
+				368CBCE9233F942400602848 /* UIView+Ex.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -217,7 +232,7 @@
 				};
 			};
 			buildConfigurationList = 36C6D6201F39932500B7142B /* Build configuration list for PBXProject "TinyToastSample" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -263,7 +278,10 @@
 				36C6D62B1F39932500B7142B /* ViewController.swift in Sources */,
 				36C6D6291F39932500B7142B /* AppDelegate.swift in Sources */,
 				36835DDF1F41892A00592148 /* ButtonWithUL.swift in Sources */,
+				368CBCE4233F170300602848 /* AppEventHandler.swift in Sources */,
 				36EC3D821F3C4CF9004385A9 /* StandardButton.swift in Sources */,
+				368CBCE6233F173000602848 /* SceneDelegate.swift in Sources */,
+				368CBCEA233F942400602848 /* UIView+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C6D64F1F39941B00B7142B /* TinyToastWindow.swift in Sources */,
-				36C6D64D1F39939B00B7142B /* TinyToastView.swift in Sources */,
+				368CBCF0233FB5DA00602848 /* TinyToastHandler.swift in Sources */,
+				368CBCE2233E562200602848 /* TinyToastViewController.swift in Sources */,
 				36F7FBCF1F3C23D700F513E7 /* TinyToastModel.swift in Sources */,
+				368CBCEE233F975F00602848 /* UIView+Ex.swift in Sources */,
 				366BC53F1F3AC1DA0017DEA8 /* TinyToastEnum.swift in Sources */,
+				3667E10F233A5F54002CCD9C /* WindowBuilder.swift in Sources */,
 				3679459F1F3C650100E84746 /* AsyncUtil.swift in Sources */,
 				366BC53D1F3AB1D20017DEA8 /* TinyToast.swift in Sources */,
 			);
@@ -417,7 +437,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -430,7 +451,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CCNMX7TC9;
 				INFOPLIST_FILE = TinyToastSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.TinyToastSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -445,7 +469,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CCNMX7TC9;
 				INFOPLIST_FILE = TinyToastSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.TinyToastSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -466,7 +493,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TinyToast/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.TinyToast;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -491,7 +522,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TinyToast/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.TinyToast;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

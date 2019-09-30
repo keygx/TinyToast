@@ -2,7 +2,7 @@
 //  TinyToast.swift
 //  TinyToast
 //
-//  Created by keygx on 2017/08/09.
+//  Created by keygx on 2019/09/29.
 //  Copyright © 2017年 keygx. All rights reserved.
 //
 
@@ -12,9 +12,9 @@ public class TinyToast: TinyToastDelegate {
     // Singlton
     public static let shared = TinyToast()
     // Toast
-    let toast = TinyToastView()
+    private let toastHandler = TinyToastHandler()
     // Queue List
-    var queue: [TinyToastModel] {
+    private var queue: [TinyToastModel] {
         didSet {
             if queue.count == 1 {
                 next()
@@ -22,7 +22,7 @@ public class TinyToast: TinyToastDelegate {
         }
     }
     // Is Queued
-    var isQueued: Bool {
+    private var isQueued: Bool {
         if !queue.isEmpty {
             return true
         }
@@ -31,7 +31,7 @@ public class TinyToast: TinyToastDelegate {
     
     private init() {
         queue = [TinyToastModel]()
-        toast.delegate = self
+        toastHandler.delegate = self
     }
 }
 
@@ -54,14 +54,14 @@ extension TinyToast {
         if !isQueued {
             return
         }
-        toast.dismiss()
+        toastHandler.dismiss()
     }
     
     public func dismissAll() {
         if !isQueued {
             return
         }
-        toast.dismiss()
+        toastHandler.dismiss()
         AsyncUtil.sync {
             queue.removeAll()
         }
@@ -69,11 +69,11 @@ extension TinyToast {
 }
 
 extension TinyToast {
-    func next() {
+    private func next() {
         if !isQueued {
             return
         }
-        toast.show(message: queue[0].message, valign: queue[0].valign, duration: queue[0].duration)
+        toastHandler.show(message: queue[0].message, valign: queue[0].valign, duration: queue[0].duration)
     }
     
     func didCompleted() {
