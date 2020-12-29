@@ -16,6 +16,7 @@ github "keygx/TinyToast"
 
 ### Swift versions support
 
+- Swift 5.2, tag "swift5.2"
 - Swift 5.1, tag "swift5.1"
 - Swift 5, tag "swift5"
 - Swift 4.2, tag "swift4.2"
