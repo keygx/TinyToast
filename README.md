@@ -3,7 +3,7 @@
 TinyToast is simple toast library in Swift.
 
 ## Requirements
-- Swift 5.1
+- Swift 5.2
 - iOS 9.0 or later
 
 ## Installation
@@ -14,8 +14,15 @@ TinyToast is simple toast library in Swift.
 github "keygx/TinyToast"
 ```
 
+### CocoaPods
+
+```PodFile
+pod 'TinyToast', :git => 'https://github.com/keygx/TinyToast'
+```
+
 ### Swift versions support
 
+- Swift 5.2, tag "swift5.2"
 - Swift 5.1, tag "swift5.1"
 - Swift 5, tag "swift5"
 - Swift 4.2, tag "swift4.2"
